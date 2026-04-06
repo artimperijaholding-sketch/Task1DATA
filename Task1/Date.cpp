@@ -106,3 +106,36 @@ bool Date::valid() const
 {
     return (month>=1 && month<=12 && day>=1 && day<=monthDays());
 }
+
+bool Date::operator==(const Date& obj) const&
+{
+    return this->year==obj.year && this->month==obj.month && this->day==obj.day;
+}
+
+bool Date::operator!=(const Date& obj) const&
+{
+    return !(*this==obj) ;
+}
+
+bool Date::operator>(const Date& obj) const&
+{
+    if (this->year > obj.year)return true;
+    else if (this->year == obj.year && this->month > obj.month)return true;
+    else if (this->year == obj.year && this->month > obj.month && this->day > obj.day)return true;
+    else return false;
+}
+
+bool Date::operator<(const Date& obj) const&
+{
+    return !(*this > obj) && *this!=obj;
+}
+
+bool Date::operator>=(const Date& obj) const&
+{
+    return (*this>obj) || *this==obj;
+}
+
+bool Date::operator<=(const Date& obj) const&
+{
+    return !(*this>obj) ;
+}

@@ -25,8 +25,22 @@ int main()
 	cout << "a>=b: " << boolalpha << (a >= b) << endl;;
 	cout << "a>b: " << boolalpha << (a > b) << endl;
 	cout << "a<b: " << boolalpha << (a < b) << endl;
+	cout << "-----------------------------------" << endl;
+	a.showDate();
+	a += 10;
+	a.showDate();
+	a += 10.0f;
+	a.showDate();
+	a += 10l;
 
-
+	a.showDate();
+	cout << endl;
+	a -= 10;
+	a.showDate();
+	a -= 10.0f;
+	a.showDate();
+	a -= 10l;
+	a.showDate();
 
 
 

@@ -160,7 +160,7 @@ Date& Date::operator-=(int days)
 
 Date& Date::operator+=(float months)
 {
-    this->month += month;
+    this->month += months;
     while (this->month > 12)
     {
         this->month -= 12;
@@ -171,7 +171,7 @@ Date& Date::operator+=(float months)
 
 Date& Date::operator-=(float months)
 {
-    this->month -= month;
+    this->month -= months;
     while (this->month <0)
     {
         this->month += 12;

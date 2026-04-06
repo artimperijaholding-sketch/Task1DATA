@@ -191,3 +191,45 @@ Date& Date::operator-=(long years)
     this->year += years;
     return*this;
 }
+
+Date Date::operator+(int days) const&
+{
+    Date tmp = *this;
+    tmp += days;
+    return tmp;
+}
+
+Date Date::operator-(int days) const&
+{
+    Date tmp = *this;
+    tmp -= days;
+    return tmp;
+}
+
+Date Date::operator+(float months) const&
+{
+    Date tmp = *this;
+    tmp += month;
+    return tmp;
+}
+
+Date Date::operator-(float months) const&
+{
+    Date tmp = *this;
+    tmp -= month;
+    return tmp;
+}
+
+Date Date::operator+(long years) const&
+{
+    Date tmp = *this;
+    tmp += years;
+    return tmp;
+}
+
+Date Date::operator-(long years) const&
+{
+    Date tmp = *this;
+    tmp -= years;
+    return tmp;
+}

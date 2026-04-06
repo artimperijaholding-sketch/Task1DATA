@@ -41,7 +41,11 @@ int main()
 	a.showDate();
 	a -= 10l;
 	a.showDate();
-
+	cout << "-----------------------------------" << endl;
+	cout << endl;
+	Date result1 = a + 10;
+	a.showDate();
+	result1.showDate();
 
 
 	return 0;

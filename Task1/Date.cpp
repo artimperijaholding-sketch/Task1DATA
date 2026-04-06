@@ -99,9 +99,10 @@ int Date::getDay() const
 
 void Date::showDate() const
 {
+    cout << day / 10 << day % 10 << " ." << month / 10 << month % 10 << " ." << year << endl;
 }
 
 bool Date::valid() const
 {
-    return false;
+    return (month>=1 && month<=12 && day>=1 && day<=monthDays());
 }

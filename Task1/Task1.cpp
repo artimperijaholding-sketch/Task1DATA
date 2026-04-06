@@ -1,6 +1,7 @@
 ﻿
 
 #include <iostream>
+#include <iomanip>
 #include "Date.h"
 
 int main()
@@ -17,7 +18,18 @@ int main()
 	cout << endl;
 	b.showDate();
 	cout << "-----------------------------------" << endl;
-	cout << (a > b) << endl;
+	//cout << (a > b) << endl;
+	cout << "a==b: " << boolalpha << (a == b) << endl;
+	cout << "a!=b: " << boolalpha << (a != b) << endl;
+	cout << "a<=b: " << boolalpha << (a <= b) << endl;
+	cout << "a>=b: " << boolalpha << (a >= b) << endl;;
+	cout << "a>b: " << boolalpha << (a > b) << endl;
+	cout << "a<b: " << boolalpha << (a < b) << endl;
+
+
+
+
+
 	return 0;
 
 

@@ -139,3 +139,55 @@ bool Date::operator<=(const Date& obj) const&
 {
     return !(*this>obj) ;
 }
+
+Date& Date::operator+=(int days)
+{
+    for (int i = 0; i < days; i++)
+    {
+        nextDate();
+    }
+    return*this;
+}
+
+Date& Date::operator-=(int days)
+{
+    for (int i = 0; i < days; i++)
+    {
+        prevDate();
+    }
+    return*this;
+}
+
+Date& Date::operator+=(float months)
+{
+    this->month += month;
+    while (this->month > 12)
+    {
+        this->month -= 12;
+        this->year++;
+    }
+    return *this;
+}
+
+Date& Date::operator-=(float months)
+{
+    this->month -= month;
+    while (this->month <0)
+    {
+        this->month += 12;
+        this->year--;
+    }
+    return *this;
+}
+
+Date& Date::operator+=(long years)
+{
+    this->year += years;
+    return*this;
+}
+
+Date& Date::operator-=(long years)
+{
+    this->year += years;
+    return*this;
+}

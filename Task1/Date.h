@@ -52,5 +52,11 @@ public:
 	Date operator - (long years)const&;
 
 
+	Date& operator -- ();
+	Date operator -- (int);
+	Date& operator ++ ();
+	Date operator ++ (int);
+
+
 };
 

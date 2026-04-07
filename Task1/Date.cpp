@@ -233,3 +233,29 @@ Date Date::operator-(long years) const&
     tmp -= years;
     return tmp;
 }
+
+Date& Date::operator--()
+{
+    this->prevDate();
+    return *this;
+}
+
+Date Date::operator--(int)
+{
+    Date tmp = *this;
+    this->prevDate();
+    return tmp;
+}
+
+Date& Date::operator++()
+{
+    this->nextDate();
+    return *this;
+}
+
+Date Date::operator++(int)
+{
+    Date tmp = *this;
+    this->nextDate();
+    return tmp;
+}

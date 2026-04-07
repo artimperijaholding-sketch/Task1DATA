@@ -121,7 +121,7 @@ bool Date::operator>(const Date& obj) const&
 {
     if (this->year > obj.year)return true;
     else if (this->year == obj.year && this->month > obj.month)return true;
-    else if (this->year == obj.year && this->month > obj.month && this->day > obj.day)return true;
+    else if (this->year == obj.year && this->month == obj.month && this->day > obj.day)return true;
     else return false;
 }
 

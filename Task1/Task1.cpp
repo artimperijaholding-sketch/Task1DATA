@@ -3,8 +3,9 @@
 #include <iostream>
 #include <iomanip>
 #include "Date.h"
+#include "Product.h"
 
-int main()
+int main1()
 {
 	Date a;
 	Date b(2000, 1, 1);
@@ -22,10 +23,12 @@ int main()
 	a2.showDate();
 	cout << endl;
 	cout << "-----------------------------------" << endl;
-	cout << a;
+	cout << a<< ":"<<a+5<<" = "<<5+a<<endl;
+	cout << a<< ":"<<a+5.0f<<" = "<<5.0f+a<<endl;
+	cout << a << ":" << a + 5L << " = " << 5L + a << endl;;
 	cout << endl;
-	cin >> b;
-	cout << b;
+	//cin >> b;
+	//cout << b;
 	//a.nextDate();
 	//b.prevDate();
 	//a.showDate();
@@ -65,4 +68,14 @@ int main()
 	return 0;
 
 
+}
+int main()
+{
+	Product a;
+	Product a2("Milk", 25.5f, Date(2026, 4, 1), 7);
+	//cin >> a;
+	//cout << endl;
+	cout << a << a2;
+
+	return 0;
 }

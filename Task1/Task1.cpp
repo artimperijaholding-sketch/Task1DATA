@@ -22,6 +22,10 @@ int main()
 	a2.showDate();
 	cout << endl;
 	cout << "-----------------------------------" << endl;
+	cout << a;
+	cout << endl;
+	cin >> b;
+	cout << b;
 	//a.nextDate();
 	//b.prevDate();
 	//a.showDate();
